@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="konto_bankowe.ApplicationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-05T00:41:27" hostname="DESKTOP-NM005FU" time="0.405">
+  <properties/>
+  <testcase name="shouldFailToLoginAssssNotExistingUser" classname="konto_bankowe.ApplicationTest" time="0.079"/>
+  <testcase name="shouldSuccessfullyLoginUser" classname="konto_bankowe.ApplicationTest" time="0.19"/>
+  <testcase name="shouldFailToLoginAsNotExistingUser" classname="konto_bankowe.ApplicationTest" time="0.123"/>
+  <system-out><![CDATA[Wiadomosc do 123456789: Twoj kod weryfikacyjny: 938651808
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
