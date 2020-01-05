@@ -83,18 +83,20 @@ public class ApplicationTest {
         assertNull(user);
     }
 
+    @PrepareForTest( {InputValidator.class, Authenticator.class})
     @Test
-    public void shouldFailToLoginAssssNotExistingUser() {
+    public void shouldPerformTransferForValidUserAndValidTransferData() {
         //given
         Customer customer = createCustomer();
         int amount = 100;
-        //TODO
+        PowerMockito.mockStatic(Authenticator.class);
+        PowerMockito.when(Authenticator.authenticateUser(customer)).thenReturn(true);
 
         //when
         serviceUnderTest.performTransfer(customer, amount);
 
         //then
-
+        //no exception thrown, method execution finished successfully
     }
 
     private static Customer createCustomer() {

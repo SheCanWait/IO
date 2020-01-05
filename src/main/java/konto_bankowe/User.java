@@ -5,10 +5,6 @@
  */
 package konto_bankowe;
 
-/**
- *
- * @author User
- */
 public abstract class User {
     protected int id;
     protected String login;
@@ -84,8 +80,5 @@ public abstract class User {
         
         return sb.toString();
     }
-    
-    
-    
-    
+
 }
