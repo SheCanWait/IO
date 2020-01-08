@@ -1,8 +1,13 @@
 package konto_bankowe;
 
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(KontoBankoweTestCategory2.class)
 public class SMSHandlerTest {
 
     private static final String LOGIN = "LOGIN";

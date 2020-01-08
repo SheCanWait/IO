@@ -1,13 +1,19 @@
 package konto_bankowe;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
+import org.junit.runners.Parameterized;
 
 import java.time.Instant;
 import java.util.Date;
 
 import static org.junit.Assert.*;
 
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(KontoBankoweTestCategory1.class)
 public class InputValidatorTest {
 
     private static final String LOGIN = "LOGIN";

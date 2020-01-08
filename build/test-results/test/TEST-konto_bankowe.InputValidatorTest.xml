@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="konto_bankowe.InputValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-01-05T13:52:19" hostname="DESKTOP-NM005FU" time="0.003">
+<testsuite name="konto_bankowe.InputValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-01-08T11:39:16" hostname="DESKTOP-NM005FU" time="0.004">
   <properties/>
-  <testcase name="shouldReturnTrueForEqualStrings" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldGetCorrectHashOfString" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldReturnFalseForNotEqualStrings" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForEmptySender" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldSuccessfullyValidateTransferDataForCorrectData" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForNullTitle" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForIncorrectId" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
   <testcase name="shouldFailToValidateTransferDataForEmptyRecipient" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForIncorrectAmount" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
+  <testcase name="shouldFailToValidateTransferDataForEmptySender" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <testcase name="shouldFailToValidateTransferDataForEmptyTitle" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForIncorrectDate" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldFailToValidateTransferDataForIncorrectAmount" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldFailToValidateTransferDataForIncorrectDate" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
+  <testcase name="shouldFailToValidateTransferDataForIncorrectId" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldFailToValidateTransferDataForNullTitle" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldGetCorrectHashOfString" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldReturnFalseForNotEqualStrings" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
+  <testcase name="shouldReturnTrueForEqualStrings" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldSuccessfullyValidateTransferDataForCorrectData" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

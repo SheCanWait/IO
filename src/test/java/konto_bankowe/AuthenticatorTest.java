@@ -1,14 +1,19 @@
 package konto_bankowe;
 
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import static org.junit.Assert.assertFalse;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(KontoBankoweTestCategory1.class)
 @RunWith(PowerMockRunner.class)
 public class AuthenticatorTest {
 

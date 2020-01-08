@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="konto_bankowe.ApplicationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-05T13:52:18" hostname="DESKTOP-NM005FU" time="0.519">
+<testsuite name="konto_bankowe.ApplicationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-08T11:39:15" hostname="DESKTOP-NM005FU" time="0.517">
   <properties/>
-  <testcase name="shouldFailToLoginAsNotExistingUser" classname="konto_bankowe.ApplicationTest" time="0.237"/>
-  <testcase name="shouldPerformTransferForValidUserAndValidTransferData" classname="konto_bankowe.ApplicationTest" time="0.13"/>
-  <testcase name="shouldSuccessfullyLoginUser" classname="konto_bankowe.ApplicationTest" time="0.137"/>
+  <testcase name="shouldPerformTransferForValidUserAndValidTransferData" classname="konto_bankowe.ApplicationTest" time="0.232"/>
+  <testcase name="shouldSuccessfullyLoginUser" classname="konto_bankowe.ApplicationTest" time="0.133"/>
+  <testcase name="shouldFailToLoginAsNotExistingUser" classname="konto_bankowe.ApplicationTest" time="0.137"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,7 +1,10 @@
 package konto_bankowe;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.runners.MethodSorters;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +12,8 @@ import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(KontoBankoweTestCategory2.class)
 public class BankAccountTest {
 
     private BankAccount serviceUnderTest;
