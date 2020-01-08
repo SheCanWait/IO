@@ -53,6 +53,9 @@ public class Application {
                 }
             }
         }
+        else {
+            throw new IllegalArgumentException(String.format("Customer not found for login: %s", login));
+        }
         
         return null;
     }

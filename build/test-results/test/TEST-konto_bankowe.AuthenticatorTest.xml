@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="konto_bankowe.AuthenticatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-01-08T11:39:16" hostname="DESKTOP-NM005FU" time="0.261">
+<testsuite name="konto_bankowe.AuthenticatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-01-08T13:05:16" hostname="DESKTOP-NM005FU" time="0.251">
   <properties/>
-  <testcase name="shouldFailToAuthenticateForWrongAuthenticationCode" classname="konto_bankowe.AuthenticatorTest" time="0.136"/>
-  <testcase name="shouldFailToAuthenticateForTooLongCode" classname="konto_bankowe.AuthenticatorTest" time="0.12"/>
-  <system-out><![CDATA[Wiadomosc do 123456789: Twoj kod weryfikacyjny: 502073303
-Wiadomosc do 123456789: Twoj kod weryfikacyjny: 361571385
+  <testcase name="shouldFailToAuthenticateForWrongAuthenticationCode" classname="konto_bankowe.AuthenticatorTest" time="0.121"/>
+  <testcase name="shouldFailToAuthenticateForTooLongCode" classname="konto_bankowe.AuthenticatorTest" time="0.125"/>
+  <system-out><![CDATA[Wiadomosc do 123456789: Twoj kod weryfikacyjny: 390209117
+Wiadomosc do 123456789: Twoj kod weryfikacyjny: 833648008
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

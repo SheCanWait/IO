@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="konto_bankowe.BankAccountTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-01-08T11:39:16" hostname="DESKTOP-NM005FU" time="0.001">
+<testsuite name="konto_bankowe.BankAccountTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-01-08T13:05:17" hostname="DESKTOP-NM005FU" time="0.002">
   <properties/>
-  <testcase name="shouldAddSingleTransferToEmptyTransactionsHistory" classname="konto_bankowe.BankAccountTest" time="0.001"/>
-  <testcase name="shouldAddSingleTransferToTransactionsHistory" classname="konto_bankowe.BankAccountTest" time="0.0"/>
+  <testcase name="shouldAddSingleTransferToEmptyTransactionsHistory[0]" classname="konto_bankowe.BankAccountTest" time="0.001"/>
+  <testcase name="shouldAddSingleTransferToTransactionsHistory[0]" classname="konto_bankowe.BankAccountTest" time="0.0"/>
+  <testcase name="shouldAddSingleTransferToEmptyTransactionsHistory[1]" classname="konto_bankowe.BankAccountTest" time="0.0"/>
+  <testcase name="shouldAddSingleTransferToTransactionsHistory[1]" classname="konto_bankowe.BankAccountTest" time="0.0"/>
+  <testcase name="shouldAddSingleTransferToEmptyTransactionsHistory[2]" classname="konto_bankowe.BankAccountTest" time="0.0"/>
+  <testcase name="shouldAddSingleTransferToTransactionsHistory[2]" classname="konto_bankowe.BankAccountTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

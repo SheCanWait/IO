@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.powermock.api.mockito.PowerMockito;
@@ -14,7 +15,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Category(KontoBankoweTestCategory1.class)
@@ -65,31 +68,6 @@ public class ApplicationTest {
 
     @PrepareForTest( {InputValidator.class, Authenticator.class})
     @Test
-    public void shouldFailToLoginAsNotExistingUser() {
-        //given
-        Customer customer = createCustomer();
-        ArrayList<Customer> customers = new ArrayList<>(Collections.singletonList(customer));
-        serviceUnderTest.setCustomers(customers);
-        PowerMockito.mockStatic(InputValidator.class);
-        PowerMockito.mockStatic(Authenticator.class);
-        PowerMockito.when(InputValidator.isEqualString(customer.getLogin(), DIFFERENT_LOGIN))
-                .thenReturn(false);
-        PowerMockito.when(InputValidator.getHashOf(PASSWORD))
-                .thenReturn("hash");
-        PowerMockito.when(InputValidator.isEqualString(customer.getPasswordHash(), "hash"))
-                .thenReturn(true);
-        PowerMockito.when(Authenticator.authenticateUser(customer))
-                .thenReturn(true);
-
-        //when
-        User user = serviceUnderTest.login(DIFFERENT_LOGIN, PASSWORD);
-
-        //then
-        assertNull(user);
-    }
-
-    @PrepareForTest( {InputValidator.class, Authenticator.class})
-    @Test
     public void shouldPerformTransferForValidUserAndValidTransferData() {
         //given
         Customer customer = createCustomer();
@@ -102,6 +80,36 @@ public class ApplicationTest {
 
         //then
         //no exception thrown, method execution finished successfully
+    }
+
+    @PrepareForTest( {InputValidator.class, Authenticator.class})
+    @Test
+    public void shouldThrowExceptionForNonExistingUser() {
+        //given
+        Customer customer = createCustomer();
+        String notExistingLogin = "notExistingLogin";
+        customer.setLogin(notExistingLogin);
+        ArrayList<Customer> customers = new ArrayList<>(Collections.singletonList(customer));
+        serviceUnderTest.setCustomers(customers);
+        PowerMockito.mockStatic(InputValidator.class);
+        PowerMockito.mockStatic(Authenticator.class);
+        PowerMockito.when(InputValidator.isEqualString(customer.getLogin(), LOGIN))
+                .thenReturn(true);
+        PowerMockito.when(InputValidator.getHashOf(PASSWORD))
+                .thenReturn("hash");
+        PowerMockito.when(InputValidator.isEqualString(customer.getPasswordHash(), "hash"))
+                .thenReturn(true);
+        PowerMockito.when(Authenticator.authenticateUser(customer))
+                .thenReturn(true);
+
+        //when
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+                serviceUnderTest.login(LOGIN, PASSWORD);
+        });
+
+        //then
+        assertNotNull(exception);
+        Assertions.assertEquals(String.format("Customer not found for login: %s", LOGIN), exception.getMessage());
     }
 
     private static Customer createCustomer() {

@@ -4,21 +4,39 @@ import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
+import org.junit.runners.Parameterized;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Category(KontoBankoweTestCategory2.class)
+@RunWith(Parameterized.class)
 public class BankAccountTest {
 
     private BankAccount serviceUnderTest;
 
-    @Before
+    @Parameterized.Parameter
+    public Transfer transferParameter = new Transfer();
+
+    @Parameterized.Parameters
+    public static Collection data() {
+        Transfer transfer1 = new Transfer();
+        Transfer transfer2 = new Transfer();
+        Transfer transfer3 = new Transfer();
+        transfer1.id = 1;
+        transfer2.id = 2;
+        transfer3.id = 3;
+        return new ArrayList<>(Arrays.asList(transfer1, transfer2, transfer3));
+    }
+
+        @Before
     public void setUp() {
         serviceUnderTest = new BankAccount();
     }

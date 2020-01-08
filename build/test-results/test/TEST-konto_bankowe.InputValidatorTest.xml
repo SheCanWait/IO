@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="konto_bankowe.InputValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-01-08T11:39:16" hostname="DESKTOP-NM005FU" time="0.004">
+<testsuite name="konto_bankowe.InputValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-01-08T13:05:17" hostname="DESKTOP-NM005FU" time="0.004">
   <properties/>
-  <testcase name="shouldFailToValidateTransferDataForEmptyRecipient" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
+  <testcase name="shouldFailToValidateTransferDataForEmptyRecipient" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
   <testcase name="shouldFailToValidateTransferDataForEmptySender" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <testcase name="shouldFailToValidateTransferDataForEmptyTitle" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForIncorrectAmount" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
-  <testcase name="shouldFailToValidateTransferDataForIncorrectDate" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
+  <testcase name="shouldFailToValidateTransferDataForIncorrectAmount" classname="konto_bankowe.InputValidatorTest" time="0.001"/>
+  <testcase name="shouldFailToValidateTransferDataForIncorrectDate" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <testcase name="shouldFailToValidateTransferDataForIncorrectId" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <testcase name="shouldFailToValidateTransferDataForNullTitle" classname="konto_bankowe.InputValidatorTest" time="0.0"/>
   <testcase name="shouldGetCorrectHashOfString" classname="konto_bankowe.InputValidatorTest" time="0.0"/>

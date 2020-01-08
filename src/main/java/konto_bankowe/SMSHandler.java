@@ -16,6 +16,9 @@ public class SMSHandler {
     }
     
     private static void send(String telephoneNumber, String message) {
+        if(!telephoneNumber.matches("^\\d{9}$")) {
+            throw new IllegalArgumentException("Invalid telephone number: " + telephoneNumber);
+        }
         StringBuilder sb = new StringBuilder();
         sb.append("Wiadomosc do ");
         sb.append(telephoneNumber);
